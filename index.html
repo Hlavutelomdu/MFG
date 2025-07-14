@@ -32,7 +32,6 @@
     <button onclick="openQuotePopup()">Get a Quote</button>
     <button onclick="openPlans()">Compare plans</button>
     <button>Apply Now</button>
-    <button onclick="window.location.href='life-cover.html'">Life Cover</button>
   </section>
 
   <section id="about" class="section">
@@ -41,37 +40,103 @@
   </section>
 
   <section id="plans" class="section">
-  <h2>Funeral Cover Plans</h2>
-  <p>Click on a plan below to see full coverage details:</p>
+  <h2>Compare Plans</h2>
+  <p>Select a plan below to view full coverage details. Plans are categorized by number of people covered.</p>
 
+  <!-- 7 People Plans -->
+  <h3>Plans for 7 People</h3>
   <div class="plans-container">
-    <div class="plan-card" onclick="showPlanDetails('planS')">
-      <h3>Standard Plus Plan</h3>
-      <p>Up to R10,000 cover</p>
+    <div class="plan-card" onclick="showPlanDetails('standardPlan')">
+      <h4>Standard Plan</h4>
+      <p>Up to R10,000 Cover</p>
       <span class="click-hint">Click to view details</span>
     </div>
-
-    <div class="plan-card" onclick="showPlanDetails('planP')">
-      <h3>Premium Family Plan</h3>
-      <p>Up to R20,000 cover</p>
+    <div class="plan-card" onclick="showPlanDetails('essentialPlan')">
+      <h4>Essential Plan</h4>
+      <p>Up to R10,000 Cover</p>
       <span class="click-hint">Click to view details</span>
     </div>
   </div>
-</section>
 
-<!-- Plan 1 Popup -->
-<div class="popup" id="planS">
+  <!-- 15 People Plans -->
+  <h3>Plans for 15 People</h3>
+  <div class="plans-container">
+    <div class="plan-card" onclick="showPlanDetails('comprehensivePlan')">
+      <h4>Comprehensive Plan</h4>
+      <p>Up to R20,000 Cover</p>
+      <span class="click-hint">Click to view details</span>
+    </div>
+    <div class="plan-card" onclick="showPlanDetails('deluxePlan')">
+      <h4>Deluxe Plan</h4>
+      <p>Up to R20,000 Cover</p>
+      <span class="click-hint">Click to view details</span>
+    </div>
+  </div>
+
+  <!-- Popups -->
+<div class="popup" id="standardPlan">
   <div class="popup-content">
-    <span class="close" onclick="hidePlanDetails('planS')">&times;</span>
+    <span class="close" onclick="hidePlanDetails('standardPlan')">&times;</span>
+    <h2>Standard Plan</h2>
+    <p><strong>Cover:</strong> Up to R10,000</p>
+    <p><strong>Monthly Premium:</strong> R100</p>
+    <p><strong>Who’s Covered:</strong> Principal individual, spouse + up to 5 children</p>
+    <ul>
+      <li>Principal Member & spouse: R10,000</li>
+      <li>Children 14–21 Years: R10,000</li>
+      <li>Children 6–13 Years: R5,000</li>
+      <li>Children 1–5 Years: R3,000</li>
+      <li>0–11 months: R1,250</li>
+      <li>Stillborn: R1,250</li>
+    </ul>
+  </div>
+</div>
+
+<div class="popup" id="essentialPlan">
+  <div class="popup-content">
+    <span class="close" onclick="hidePlanDetails('essentialPlan')">&times;</span>
+    <h2>Essential Plan</h2>
+    <p><strong>Cover:</strong> Up to R20,000</p>
+    <p><strong>Monthly Premium:</strong> R180</p>
+    <p><strong>Who’s Covered:</strong> Principal individual, spouse + up to 5 children</p>
+    <ul>
+      <li>Principal, spouse: R20,000</li>
+      <li>Children 14–21 Years: R10,000</li>
+      <li>Children 6–13 Years: R5,000</li>
+      <li>Children 1–5 Years: R3,000</li>
+      <li>0–11 months: R1,250</li>
+      <li>Stillborn: R1,250</li>
+    </ul>
+  </div>
+  </div>
+
+  <!-- Plan 1 Popup -->
+<div class="popup" id="comprehensivePlan">
+  <div class="popup-content">
+    <span class="close" onclick="hidePlanDetails('comprehensivePlan')">&times;</span>
+     <h2>comprehensive Plan</h2>
+    <p><strong>Monthly Premium:</strong> R250</p>
+    <p><strong>Cover:</strong> Up to R10,000</p>
+    <p><strong>Covers:</strong> 15 People</p>
+    <ul>
+      <li>Principal Member, Spouse: R10,000</li>
+      <li>4 Parents 64–75 Years: R10,000</li>
+      <li>Children 14–21 Years: R10,000</li>
+      <li>Extended Family 14–64 Years: R10,000</li>
+      <li>Children 6–13 Years: R5,000</li>
+      <li>Children 1–5 Years: R2,500</li>
+      <li>0–11 months: R1,125 </li>
+      <li>Stillborn: R1,125</li>
+    </ul>
    
   </div>
 </div>
 
-<!-- Plan 2 Popup -->
-<div class="popup" id="planP">
+<!--Deluxe Popup -->
+<div class="popup" id="deluxePlan">
   <div class="popup-content">
-    <span class="close" onclick="hidePlanDetails('planP')">&times;</span>
-    <h2>Comprehensive</h2>
+    <span class="close" onclick="hidePlanDetails('deluxePlan')">&times;</span>
+    <h2>Deluxe Plan</h2>
     <p><strong>Monthly Premium:</strong> R420</p>
     <p><strong>Cover:</strong> Up to R20,000</p>
     <p><strong>Covers:</strong> 15 People</p>
@@ -86,9 +151,9 @@
       <li>Stillborn: R2,500</li>
     </ul>
   </div>
-</div>
+  </div>
 
-
+  </section>
 
   <section id="benefits" class="section">
     <h2>Benefits</h2>
