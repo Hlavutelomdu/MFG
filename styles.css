@@ -41,6 +41,14 @@ header {
   white-space: nowrap;
 }
 
+.logo-text-group {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 0.3;
+}
+
 .menu-toggle {
   font-size: 2rem;
   background: none;
@@ -80,6 +88,16 @@ header {
 .nav-links li a:hover {
   background-color: #009e87;
   border-radius: 5px;
+}
+
+#home {
+  background-image: url('images/fam.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Ensure text is readable on dark image */
+  padding: 100px 20px;
+  text-align: center;
 }
 
 .section {
@@ -258,6 +276,26 @@ input, select, textarea {
   width: 20px;
   height: 20px;
   vertical-align: middle;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
