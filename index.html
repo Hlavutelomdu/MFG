@@ -11,7 +11,10 @@
     <nav class="navbar">
       <div class="logo-container">
         <img src="Images/LogoMFG.png" alt="Maturuka Logo" class="logo-img" />
-        <span class="logo-text">Maturuka Funeral Group</span>
+        <div class="logo-text-group">
+          <span class="logo-text">Maturuka Funeral Group</span>
+          <span class="contact-info">📧 Maturukaholdings@gmail.com / 📞 078 9280 229</span>
+        </div>
       </div>
       <div class="menu-toggle" id="menu-toggle">☰</div>
       <ul class="nav-links" id="nav-links">
@@ -229,25 +232,17 @@
   <textarea placeholder="Message" rows="4" name="message" required></textarea>
   
   <button type="submit">Send Message</button>
-       <div class="contact-info">
-      <p>
-        <img src="Images/email.webp" alt="Email" class="contact-icon-img">
-        <a href="mailto:support@maturuka.co.za">Maturukaholdings@gmail.com</a>
-      </p>
-      <p>
-        <img src="Images/Phone.png" alt="Phone" class="contact-icon-img">
-       <a href="tel:0800999888">0800 999 888</a>
-      </p>
-      <p>
-        <img src="Images/whatsapp.png" alt="WhatsApp" class="contact-icon-img">
-         <a href="https://wa.me/27820001234" target="_blank">+27 82 000 1234</a>
-      </p>
-    </form>
+  </form>
   </section>
+
+  <a href="https://wa.me/2789280229" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <img src="Images/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+  </a>
 
   <footer style="background-color:#006d5b; color:white; text-align:center; padding:20px;">
     <p>&copy; 2025 Maturuka Funeral Group. All rights reserved.</p>
   </footer>
+
 
   <script>
     document.getElementById('menu-toggle').addEventListener('click', () => {
