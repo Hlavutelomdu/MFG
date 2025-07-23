@@ -389,5 +389,17 @@ input, select, textarea {
   .popup-content {
     padding: 20px;
   }
+
+    #home {
+    padding: 60px 15px;
+  }
+
+  #home p {
+    font-size: 0.95rem;
+  }
+
+  #home h1 {
+    font-size: 1.5rem;
+  }
 }
 
