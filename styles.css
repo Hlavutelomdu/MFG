@@ -376,7 +376,12 @@ input, select, textarea {
   }
 
   #home {
-    padding: 60px 15px;
-    height: auto; 
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 100vh;
+  padding: 60px 15px;
+  height: auto; 
   }
 }
