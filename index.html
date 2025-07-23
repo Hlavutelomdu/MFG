@@ -22,7 +22,6 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#plans">Plans</a></li>
-        <li><a href="#how">How It Works</a></li>
         <li><a href="#benefits">Benefits</a></li>
         <li><a href="#faqs">FAQs</a></li>
         <li><a href="#claims">Claim Process</a></li>
@@ -32,32 +31,59 @@
 
   <section id="home" class="section">
     <h1>Affordable Funeral Cover for You & Your Loved Ones</h1>
-    <p>Funeral cover helps your family manage the financial stress of losing a loved one. It covers funeral costs and allows your family to focus on what matters most.</p>
+    <p>Funeral cover helps your family manage the financial stress of losing a loved one.</p>
+    <p>It covers funeral costs and allows your family to focus on what matters most.</p>
     <button onclick="openQuotePopup()">Get a Quote</button>
     <button onclick="openPlans()">Compare plans</button>
     <button>Apply Now</button>
+    <div class="trust-badges">
+      <p>✅ Funeral Cover you can Trust | 🛡️ Instant Payouts | 💳 Flexible Monthly Plans</p>
+    </div>
   </section>
 
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>We are a family-focused funeral cover provider committed to helping South Africans access affordable, dignified funeral solutions. Our mission is to provide peace of mind, fast payouts, and community care through fair premiums and compassionate service.</p>
-  </section>
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>
+    At <strong>Maturuka Funeral Group 🕊️</strong>, we understand how overwhelming it can be to lose a loved one. That’s why we’re here — to help lighten the load with funeral cover that’s 
+    affordable, flexible, and designed with real families in mind.
+  </p>
+
+  <p>
+    Whether you need simple individual protection or a comprehensive plan for your entire family, we’ve got you covered. Our policies support between <strong>7 and 15 people</strong> — 
+    including spouses, children, parents, and extended family — with payouts of up to <strong>R20,000</strong>.
+  </p>
+
+  <div class="about-highlights">
+    <h3>Why Choose Us?</h3>
+    <ul>
+      <li> Fast & hassle-free claims processing</li>
+      <li> Budget-friendly monthly premiums</li>
+      <li> No medical exams required</li>
+      <li> Flexible cover for your unique needs</li>
+    </ul>
+  </div>
+
+  <p>
+    Whether you choose our <strong>Standard Plan</strong> or our <strong>Extended Family Care Plan</strong>, you’re choosing peace of mind — because every life deserves dignity.🕊️
+  </p>
+</section>
+
 
   <section id="plans" class="section">
   <h2>Compare Plans</h2>
   <p>Select a plan below to view full coverage details. Plans are categorized by number of people covered.</p>
 
   <!-- 7 People Plans -->
-  <h3>Plans for 7 People</h3>
+  <h3>Standard Plan for 7 People</h3>
   <div class="plans-container">
-    <div class="plan-card" onclick="showPlanDetails('standardPlan')">
-      <h4>Standard Plan</h4>
+    <div class="plan-card" onclick="showPlanDetails('standardOptionOne')">
+      <h4>Option One</h4>
       <p>Up to R10,000 Cover</p>
       <p>Premium: R100pm</p>
       <span class="click-hint">Click to view details</span>
     </div>
-    <div class="plan-card" onclick="showPlanDetails('essentialPlan')">
-      <h4>Essential Plan</h4>
+    <div class="plan-card" onclick="showPlanDetails('standardOptionTwo')">
+      <h4>Option Two</h4>
       <p>Up to R20,000 Cover</p>
       <p>Premium: R180pm</p>
       <span class="click-hint">Click to view details</span>
@@ -65,16 +91,16 @@
   </div>
 
   <!-- 15 People Plans -->
-  <h3>Plans for 15 People</h3>
+  <h3>Extended Care Plan for 15 People</h3>
   <div class="plans-container">
-    <div class="plan-card" onclick="showPlanDetails('comprehensivePlan')">
-      <h4>Comprehensive Plan</h4>
+    <div class="plan-card" onclick="showPlanDetails('ExtendedOptionOne')">
+      <h4>Option One</h4>
       <p>Up to R10,000 Cover</p>
       <p>Premium: R250pm</p>
       <span class="click-hint">Click to view details</span>
     </div>
-    <div class="plan-card" onclick="showPlanDetails('deluxePlan')">
-      <h4>Deluxe Plan</h4>
+    <div class="plan-card" onclick="showPlanDetails('ExtendedOptionTwo')">
+      <h4>Option Two</h4>
       <p>Up to R20,000 Cover</p>
       <p>Premium: R420pm</p>
       <span class="click-hint">Click to view details</span>
@@ -82,10 +108,10 @@
   </div>
 
   <!-- Popups -->
-<div class="popup" id="standardPlan">
+<div class="popup" id="standardOptionOne">
   <div class="popup-content">
-    <span class="close" onclick="hidePlanDetails('standardPlan')">&times;</span>
-    <h2>Standard Plan</h2>
+    <span class="close" onclick="hidePlanDetails('standardOptionOne')">&times;</span>
+    <h2>Option</h2>
     <p><strong>Cover:</strong> Up to R10,000</p>
     <p><strong>Monthly Premium:</strong> R100</p>
     <p><strong>Who’s Covered:</strong> Principal individual, spouse + up to 5 children</p>
@@ -100,10 +126,10 @@
   </div>
 </div>
 
-<div class="popup" id="essentialPlan">
+<div class="popup" id="standardOptionTwo">
   <div class="popup-content">
-    <span class="close" onclick="hidePlanDetails('essentialPlan')">&times;</span>
-    <h2>Essential Plan</h2>
+    <span class="close" onclick="hidePlanDetails('standardOptionTwo')">&times;</span>
+    <h2>Option Two</h2>
     <p><strong>Cover:</strong> Up to R20,000</p>
     <p><strong>Monthly Premium:</strong> R180</p>
     <p><strong>Who’s Covered:</strong> Principal individual, spouse + up to 5 children</p>
@@ -118,11 +144,11 @@
   </div>
   </div>
 
-  <!-- Comprehensive Plan Popup -->
-<div class="popup" id="comprehensivePlan">
+  <!-- Extended Family Popup -->
+<div class="popup" id="ExtendedOptionOne">
   <div class="popup-content">
-    <span class="close" onclick="hidePlanDetails('comprehensivePlan')">&times;</span>
-     <h2>comprehensive Plan</h2>
+    <span class="close" onclick="hidePlanDetails('ExtendedOptionOne')">&times;</span>
+     <h2>Option One</h2>
     <p><strong>Monthly Premium:</strong> R250</p>
     <p><strong>Cover:</strong> Up to R10,000</p>
     <p><strong>Covers:</strong> 15 People</p>
@@ -140,11 +166,10 @@
   </div>
 </div>
 
-<!--Deluxe Popup -->
-<div class="popup" id="deluxePlan">
+<div class="popup" id="ExtendedOptionTwo">
   <div class="popup-content">
-    <span class="close" onclick="hidePlanDetails('deluxePlan')">&times;</span>
-    <h2>Deluxe Plan</h2>
+    <span class="close" onclick="hidePlanDetails('ExtendedOptionTwo')">&times;</span>
+    <h2>Option Two</h2>
     <p><strong>Monthly Premium:</strong> R420</p>
     <p><strong>Cover:</strong> Up to R20,000</p>
     <p><strong>Covers:</strong> 15 People</p>
@@ -214,7 +239,7 @@
       <li>Processing time: 24–48 hours</li>
       <li>Payout made to nominated bank account</li>
     </ol>
-    <p>Support: Maturukaholdings@gmail.com | 078 9280 229</p>
+    <p>Support: claims@MFG.co.za | 0800 000 000</p>
   </section>
 
    <!-- Contact Section -->
@@ -236,7 +261,7 @@
   </form>
   </section>
 
-  <a href="https://wa.me/2778 9280 229" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <a href="https://wa.me/2789280229" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
   <img src="Images/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
   </a>
 
