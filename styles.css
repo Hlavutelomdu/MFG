@@ -374,4 +374,9 @@ input, select, textarea {
   .popup-content {
     padding: 20px;
   }
+
+  #home {
+    padding: 60px 15px;
+    height: auto; 
+  }
 }
