@@ -91,13 +91,57 @@ header {
 }
 
 #home {
-  background-image: url('images/fam.jpeg'); 
+  background-image: url('images/FamilyBackground.png'); 
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
-  color: white; /* Ensure text is readable on dark image */
+  color: white;
+  height: 100vh;
   padding: 100px 20px;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#home p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin-bottom: 0px;
+}
+
+.trust-badges p {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #f0f0f0;
+}
+
+#about {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.about-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.about-highlights li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.about-highlights li::before {
+  content: '✔️';
+  position: absolute;
+  left: 0;
 }
 
 .section {
