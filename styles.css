@@ -394,6 +394,11 @@ input, select, textarea {
     padding: 60px 15px;
   }
 
+   .home-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
   #home p {
     font-size: 0.95rem;
   }
