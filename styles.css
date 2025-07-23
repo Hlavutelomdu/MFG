@@ -91,19 +91,34 @@ header {
 }
 
 #home {
-  background-image: url('Images/FamilyBackground.png'); 
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  color: white;
+  position: relative;
   height: 100vh;
+  color: white;
   padding: 100px 20px;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.home-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#home h1,
+#home p,
+#home button,
+.trust-badges {
+  position: relative;
+  z-index: 1;
 }
 
 #home p {
@@ -374,14 +389,5 @@ input, select, textarea {
   .popup-content {
     padding: 20px;
   }
-
-  #home {
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat;
-  color: white;
-  height: 100vh;
-  padding: 60px 15px;
-  height: auto; 
-  }
 }
+
