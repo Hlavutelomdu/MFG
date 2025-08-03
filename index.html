@@ -205,7 +205,11 @@
   <div class="popup-content">
     <span class="close" onclick="closeQuotePopup()">&times;</span>
     <h2>Request a Quote</h2>
-    <form onsubmit="submitQuote(event)">
+    <form action="https://formsubmit.co/Maturukaholdings@gmail.com" method="POST">
+  <!-- Hidden Settings -->
+  <input type="hidden" name="_next" value="https://hlavutelomdu.github.io/MFG/thankyou.html">
+  <input type="hidden" name="_captcha" value="false">
+      
       <input type="text" placeholder="Full Name" required />
       <input type="number" placeholder="Age" required />
       <select required>
@@ -287,12 +291,6 @@
       document.getElementById('quote-popup').style.display = 'none';
     }
 
-    function submitQuote(e) {
-      e.preventDefault();
-      alert('Quote request submitted! We’ll be in touch.');
-      closeQuotePopup();
-    }
-
     function openPlans() {
       document.getElementById('plans').scrollIntoView({ behavior: 'smooth' }); 
     }
@@ -307,5 +305,6 @@
   </script>
 </body>
 </html>
+
 
 
