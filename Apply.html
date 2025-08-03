@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply - Maturuka Funeral Cover</title>
+  <link rel="stylesheet" href="Apply.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header with logo and title side by side -->
+    <div class="page-header">
+      <a class="back-home" href="index.html">← Back </a>
+      <div class="title-group">
+        <img src="Images/LogoMFG.png" alt="Maturuka Funeral Group Logo" class="app-logo" />
+        <div class="title-text">
+          <h1>Funeral Cover Application</h1>
+          <p class="intro">Please complete the sections below to apply. Coverage begins immediately for accidental death; other claims are processed quickly after verification.</p>
+        </div>
+      </div>
+    </div>
+
+    <form id="application-form" action="https://formsubmit.co/hlavutelomdu@gmail.com" method="POST" novalidate>
+      <!-- 1. Principal Member Details -->
+      <fieldset>
+        <legend>Principal Member Details</legend>
+        <div class="grid two-col">
+          <label>
+            Full Names & Surname
+            <input type="text" name="principal_fullname" required placeholder="Full Name & Surname" />
+          </label>
+          <label>
+            Identity Number
+            <input type="text" name="principal_id" required placeholder="ID Number" />
+          </label>
+        </div>
+        <div class="grid two-col">
+          <label>
+            Telephone Number
+            <input type="tel" name="principal_telephone" required placeholder="Telephone Number" />
+          </label>
+          <label>
+            Cell Number
+            <input type="tel" name="principal_cell" required placeholder="Cell Number" />
+          </label>
+        </div>
+        <label>
+          Physical Address
+          <input type="text" name="principal_address" required placeholder="Physical Address" />
+        </label>
+      </fieldset>
+
+      <!-- 2. Dependents -->
+      <fieldset>
+        <legend>Dependents (up to 16)</legend>
+        <div style="overflow-x:auto;">
+          <table class="dependents-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Surname</th>
+                <th>Name</th>
+                <th>Identity Number</th>
+                <th>Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <script>
+                for (let i = 1; i <= 16; i++) {
+                  document.write(`
+                    <tr>
+                      <td>${i}</td>
+                      <td><input type="text" name="dep_${i}_surname" placeholder="Surname" /></td>
+                      <td><input type="text" name="dep_${i}_name" placeholder="Name" /></td>
+                      <td><input type="text" name="dep_${i}_id" placeholder="ID Number" /></td>
+                      <td>
+                        <select name="dep_${i}_gender">
+                          <option value="">Gender</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Other</option>
+                        </select>
+                      </td>
+                    </tr>`);
+                }
+              </script>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- 3. Package / Plans -->
+      <fieldset>
+  <legend>Package / Plan Selection</legend>
+  <div class="plan-group">
+    <!-- Standard Plan (7 people) -->
+    <div class="plan-card" data-plan="Standard">
+      <div class="plan-title">Standard Plan (7 people)</div>
+
+      <!-- Option 1 -->
+      <div class="plan-option">
+        <label class="checkbox-style">
+          <input type="checkbox" name="standard_option" value="Standard_10k" />
+          <div class="option-text">
+            <div class="option-label">Option 1: R100pm</div>
+            <div class="option-desc">Up to R10,000 cover</div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Option 2 -->
+      <div class="plan-option">
+        <label class="checkbox-style">
+          <input type="checkbox" name="standard_option" value="Standard_20k" />
+          <div class="option-text">
+            <div class="option-label">Option 2: R180pm</div>
+            <div class="option-desc">Up to R20,000 cover</div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Extended Care Plan (15 people) -->
+    <div class="plan-card" data-plan="Extended">
+      <div class="plan-title">Extended Care Plan (15 people)</div>
+
+      <!-- Option 1 -->
+      <div class="plan-option">
+        <label class="checkbox-style">
+          <input type="checkbox" name="extended_option" value="Extended_10k" />
+          <div class="option-text">
+            <div class="option-label">Option 1: R250pm</div>
+            <div class="option-desc">Up to R10,000 cover</div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Option 2 -->
+      <div class="plan-option">
+        <label class="checkbox-style">
+          <input type="checkbox" name="extended_option" value="Extended_20k" />
+          <div class="option-text">
+            <div class="option-label">Option 2: R420pm</div>
+            <div class="option-desc">Up to R20,000 cover</div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+
+      <!-- 4. Method of Payment -->
+      <fieldset>
+        <legend>Method of Payment</legend>
+        <div class="payment-methods">
+          <label class="checkbox">
+            <input type="checkbox" name="payment_method[]" value="Cash" />
+            Cash Payment
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="payment_method[]" value="EFT/Bank Deposit" />
+            EFT / Bank Deposit
+          </label>
+        </div>
+
+        <div class="bank-details">
+          <h3>Banking Details</h3>
+          <div><strong>Bank Name:</strong> STANDARD BANK</div>
+          <div><strong>Account Holder:</strong> MATURUKA FUNERAL GROUP (PTY) LTD</div>
+          <div><strong>Account Number:</strong> 311273297</div>
+          <div><strong>Account Type:</strong> BUSSINESS CURRENT ACCOUNT</div>
+          <div><strong>Branch Code:</strong> 053249</div>
+          <div><strong>REFERRENCE::</strong> YOUR ID NUMBER</div>
+        </div>
+      </fieldset>
+      <!-- Benefitiary details-->
+        <fieldset>
+        <legend>Beneficiary Details</legend>
+        <div style="overflow-x:auto;">
+          <table class="beneficiary-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Full Names</th>
+                <th>Surname</th>
+                <th>Identity Number</th>
+                <th>Contact Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                      <td></td>
+                      <td><input type="text" name="BenefitiaryFullNames" placeholder="Full Names" /></td>
+                     <td><input type="text" name="Benefitiarysurname" placeholder="Surname" /></td>
+                      <td><input type="text" name="Benefitiaryid" placeholder="ID Number" /></td>
+                      <td><input type="text" name="BenefitiaryContactDetails" placeholder="Contact" /></td>
+                    </tr>
+               
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+
+      <!-- Consent & Submit -->
+      <fieldset>
+        <legend>Declaration</legend>
+        <label class="checkbox">
+          <input type="checkbox" name="agree_terms" required />
+          I declare to the best of my knowledge and belief that the particulars given above are true and correct. I understand and agree that any wilful misrepresentation in this application will invalidate any benefit under this Policy. I undertake to abide by the terms and conditions of the Policy. <a href="#" id="open-terms">Terms & Conditions</a> and consent to processing my data under POPIA.
+        </label>
+      </fieldset>
+
+      <!-- Hidden for FormSubmit -->
+      <input type="hidden" name="_next" value="https://hlavutelomdu.github.io/MFG/thankyou.html" />
+      <input type="hidden" name="_captcha" value="false" />
+
+      <div class="submit-row">
+        <button class="btn" type="submit">Submit Application</button>
+        <p class="small">Our team will review and contact you within 24 hours. Accidental cover is immediate.</p>
+      </div>
+    </form>
+  </div>
+
+  <!-- Terms & Conditions Modal -->
+  <div class="modal" id="terms-modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-terms">&times;</span>
+      <h2>Terms & Conditions</h2>
+      <div class="terms-body">
+        <!-- Replace the placeholder below with your actual terms -->
+        <p>1. Cover for Accidental death starts immediately provided that the policy has commenced i.e., the first Premium is received by MFG.</p>
+        <p>2. 6 (six) months waiting period shall apply from the Benefit Start Date, in respect of a death due to natural causes.</p>
+        <p>3. 12 (twelve) months waiting period shall apply from the Benefit Start Date in respect of a death due to suicide.</p>
+        <p>4. The waiting period is applicable per Assured Life and will commence when cover for that Assured Life commences</p>
+        <p>5. All premiums must be paid before the 7th of each month.</p>
+        <p>6. To enable MFG Life to process a claim, the following documents must be submitted:</p>
+            <div class="sub-terms">    
+            <p>6.1. Completed claim form.</p>
+            <p>6.2. MFG Life’s Death Notification Form.</p>
+            <p>6.3. Certified Copy of ID of the deceased.</p>
+            <p>6.4. Certified Copy of ID of the Claimant.</p>
+            <p>6.5. Certified Copy of the death certificate issued by the Department of Home Affairs.</p>
+            <p>6.6. Original or certified copy of all four (4) pages of the DHA1663 (Notification of death).</p>
+            <p>6.7. Proof of bank account of the claimant (stamped by the bank).</p>
+            <p>6.8. And, A police report must be completed and submitted in the event of unnatural deaths</p>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" id="accept-terms">I Understand & Close</button>
+      </div>
+    </div>
+  </div>
+
+   <!-- Offline Apply Section -->
+<section class="offline-apply">
+  <h2>Apply Offline</h2>
+  <p>If you prefer, download the application form, fill it out by hand or digitally, then upload it here. We'll receive it by email.</p>
+
+  <div class="offline-row">
+    <div class="download-box">
+      <a href="Documents/MFG APPLICATION FORM.pdf" download class="btn">Download Form (PDF)</a>
+      <p class="small">Print or fill digitally.</p>
+    </div>
+
+    <div class="upload-box">
+      <form id="offline-form" action="https://formsubmit.co/hlavutelomdu@gmail.com" method="POST" enctype="multipart/form-data">
+        <label>
+          Upload Completed Form (PDF / JPG / PNG)
+          <input type="file" name="offline_file" accept=".pdf,.jpg,.jpeg,.png" required />
+        </label>
+
+        <!-- Optional: identify source -->
+        <input type="hidden" name="form_type" value="offline_application" />
+
+        <!-- Redirect after submit -->
+        <input type="hidden" name="_next" value="https://hlavutelomdu.github.io/MFG/thankyou.html" />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <button class="btn" type="submit">Submit Offline</button>
+        <p class="small">We will receive your document and follow up via email or phone Call.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <script>
+    // plan-card highlight logic
+    const allOptions = document.querySelectorAll('input[name="standard_option"], input[name="extended_option"]');
+
+  allOptions.forEach(cb => {
+    cb.addEventListener('change', function () {
+      if (this.checked) {
+        // uncheck every other checkbox
+        allOptions.forEach(other => {
+          if (other !== this) other.checked = false;
+        });
+      }
+      updateHighlights();
+    });
+  });
+
+  function updateHighlights() {
+    // clear previous highlights
+    document.querySelectorAll('.plan-card').forEach(card => card.classList.remove('selected'));
+
+    // find which one is checked
+    const checked = document.querySelector('input[name="standard_option"]:checked, input[name="extended_option"]:checked');
+    if (!checked) return;
+
+    // determine its plan container
+    const card = checked.closest('.plan-card');
+    if (card) card.classList.add('selected');
+  }
+
+  //Payment Checks
+   const paymentChecks = document.querySelectorAll('input[name="payment_method[]"]');
+
+  paymentChecks.forEach(cb => {
+    cb.addEventListener('change', function () {
+      if (this.checked) {
+        paymentChecks.forEach(other => {
+          if (other !== this) {
+            other.checked = false;
+            other.closest('label').classList.remove('selected');
+          }
+        });
+        this.closest('label').classList.add('selected');
+      } else {
+        this.closest('label').classList.remove('selected');
+      }
+    });
+  });
+
+    // Terms modal logic
+    const openLink = document.getElementById('open-terms');
+    const modal = document.getElementById('terms-modal');
+    const closeBtn = document.getElementById('close-terms');
+    const acceptBtn = document.getElementById('accept-terms');
+
+    openLink.addEventListener('click', e => {
+      e.preventDefault();
+      modal.style.display = 'flex';
+    });
+    closeBtn.addEventListener('click', () => modal.style.display = 'none');
+    acceptBtn.addEventListener('click', () => modal.style.display = 'none');
+    window.addEventListener('click', e => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+
+  
+  </script>
+</body>
+</html>
