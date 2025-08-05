@@ -111,7 +111,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  z-index: -1;
 }
 
 #home h1,
@@ -395,17 +395,6 @@ input, select, textarea {
     #home {
     padding: 60px 15px;
   }
-
-  .home-image {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   z-index: 0;
-  }
-
   #home p {
     font-size: 0.95rem;
   }
@@ -414,5 +403,12 @@ input, select, textarea {
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 600px) {
+  .home-image {
+    object-fit: contain;   /* Ensures full image is visible on small screens */
+    height: 100vh;   
+}
+
 
 
