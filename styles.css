@@ -93,7 +93,7 @@ header {
 #home {
   position: relative;
   height: 100vh;
-  color: #009e87;
+  color: Black;
   padding: 100px 20px;
   text-align: center;
   display: flex;
@@ -131,7 +131,7 @@ header {
 .trust-badges p {
   margin-top: 20px;
   font-size: 0.95rem;
-  color: #009e87;
+  color: Black;
   font-weight: bold;
 }
 
@@ -402,13 +402,15 @@ input, select, textarea {
   #home h1 {
     font-size: 1.5rem;
   }
-}
 
-@media (max-width: 600px) {
   .home-image {
     object-fit: contain;   /* Ensures full image is visible on small screens */
     height: 100vh;   
+   }
 }
+
+
+
 
 
 
