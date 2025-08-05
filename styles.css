@@ -102,6 +102,7 @@ header {
   justify-content: center;
   overflow: hidden;
   font-weight: bold;
+    background-color: White;
 }
 
 .home-image {
@@ -408,6 +409,7 @@ input, select, textarea {
     height: 100vh;   
    }
 }
+
 
 
 
