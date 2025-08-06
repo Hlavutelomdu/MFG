@@ -91,6 +91,11 @@ header {
 }
 
 #home {
+   background-image: url('Images/MFG-BOYBackground.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
   position: relative;
   height: 100vh;
   color: Black;
@@ -102,10 +107,6 @@ header {
   justify-content: center;
   overflow: hidden;
   font-weight: bold;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 .home-image {
@@ -412,6 +413,7 @@ input, select, textarea {
     height: 100vh;   
    }
 }
+
 
 
 
