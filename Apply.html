@@ -12,7 +12,7 @@
     <div class="page-header">
       <a class="back-home" href="index.html">← Back </a>
       <div class="title-group">
-        <img src="Images/LogoMFG.png" alt="Maturuka Funeral Group Logo" class="app-logo" />
+        <img src="Images/MFG-Logo.jpeg" alt="Maturuka Funeral Group Logo" class="app-logo" />
         <div class="title-text">
           <h1>Funeral Cover Application</h1>
           <p class="intro">Please complete the sections below to apply. Coverage begins immediately for accidental death; other claims are processed quickly after verification.</p>
@@ -89,8 +89,61 @@
         </div>
       </fieldset>
 
-      <!-- 3. Package / Plans -->
-      <fieldset>
+<!-- Application Type -->
+<div class="application-type-wrapper">
+  <h3 class="section-title">Application Type</h3>
+  <p class="section-subtitle">
+    Please select what you are applying for so we can show you the correct plans.
+  </p>
+
+  <div class="select-wrapper">
+    <select id="applicationType" name="application_type" required>
+      <option value="">Select an option</option>
+      <option value="funeral">Funeral Cover</option>
+      <option value="burial">Burial Society</option>
+    </select>
+    <span class="select-arrow">▾</span>
+  </div>
+</div>
+
+
+<!-- Burial Society Plans -->
+ <div id="burialSocietySection" style="display:none;">
+  <fieldset>
+    <legend>Burial Society Plans</legend>
+    <div class="plan-group">
+
+      <div class="plan-card">
+        <div class="plan-title">Plan A</div>
+
+        <label class="checkbox-style">
+          <input type="radio" name="burial_plan" value="Plan_A_200" />
+          <div class="option-text">
+            <div class="option-label">R200 per month</div>
+            <div class="option-desc">Standard burial society benefits</div>
+          </div>
+        </label>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-title">Plan B</div>
+
+        <label class="checkbox-style">
+          <input type="radio" name="burial_plan" value="Plan_B_300" />
+          <div class="option-text">
+            <div class="option-label">R300 per month</div>
+            <div class="option-desc">Extended burial society benefits</div>
+          </div>
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+</div>
+
+      <!-- 3. Funeral cover Plans -->
+  <div id="funeralCoverSection" style="display:none;">
+  <fieldset>
   <legend>Package / Plan Selection</legend>
   <div class="plan-group">
     <!-- Standard Plan (7 people) -->
@@ -148,6 +201,7 @@
     </div>
   </div>
 </fieldset>
+</div>
 
 
       <!-- 4. Method of Payment -->
@@ -283,8 +337,6 @@
     </div>
   </div>
 </section>
-
-
   <script>
     // plan-card highlight logic
     const allOptions = document.querySelectorAll('input[name="standard_option"], input[name="extended_option"]');
@@ -348,7 +400,24 @@
     window.addEventListener('click', e => {
       if (e.target === modal) modal.style.display = 'none';
     });
+   
+    // Application type dropdown
+      const applicationType = document.getElementById("applicationType");
+  const funeralSection = document.getElementById("funeralCoverSection");
+  const burialSection = document.getElementById("burialSocietySection");
 
+  applicationType.addEventListener("change", function () {
+    funeralSection.style.display = "none";
+    burialSection.style.display = "none";
+
+    if (this.value === "funeral") {
+      funeralSection.style.display = "block";
+    }
+
+    if (this.value === "burial") {
+      burialSection.style.display = "block";
+    }
+  });
   
   </script>
 </body>
