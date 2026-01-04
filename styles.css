@@ -26,10 +26,10 @@ header {
 }
 
 .logo-img {
-  height: 50px;
-  width: 50px;
-  object-fit: cover;
-  border-radius: 50%;
+  height: 100px;
+  width: 80px;
+  object-fit: cover; /* or contain */
+  border-radius: 0;  /* makes it square */
   border: 2px solid white;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
